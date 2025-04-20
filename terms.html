@@ -1,17 +1,76 @@
+from pathlib import Path
+
+html_content = """
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8"/>
-  <title>Termos de Serviço — POV AI Video Automator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termos de Serviço - AI POV VIDEOS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 40px;
+            max-width: 800px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-  <h1>Termos de Serviço</h1>
-  <p>Bem‑vindo ao POV AI Video Automator! Ao usar nosso serviço, você concorda com:</p>
-  <ul>
-    <li>Não fazer upload de conteúdo protegido por direitos autorais sem permissão.</li>
-    <li>Não usar nosso sistema para fins ilícitos.</li>
-    <li>...</li>
-  </ul>
-  <p>Última atualização: 18 de abril de 2025</p>
+    <h1>Termos de Serviço - AI POV VIDEOS</h1>
+    <p><strong>Última atualização:</strong> 18 de abril de 2025</p>
+
+    <p>Bem-vindo ao AI POV VIDEOS! Estes Termos de Serviço (“Termos”) regem o uso do nosso aplicativo, sistemas automatizados e serviços relacionados. Ao acessar ou usar qualquer parte de nosso sistema, você concorda em estar legalmente vinculado a estes Termos.</p>
+
+    <h2>1. Sobre o Aplicativo</h2>
+    <p>AI POV VIDEOS é uma plataforma que utiliza tecnologias de inteligência artificial para gerar, editar e publicar vídeos com perspectiva POV (point of view) automaticamente em redes sociais como TikTok e YouTube.</p>
+
+    <h2>2. Elegibilidade</h2>
+    <p>Você deve ter no mínimo 13 anos de idade para utilizar o aplicativo. Ao usar o serviço, você declara e garante que atende a esse requisito.</p>
+
+    <h2>3. Uso Permitido</h2>
+    <p>Você concorda em utilizar o app exclusivamente para fins legais e em conformidade com as políticas das plataformas conectadas. É estritamente proibido:</p>
+    <ul>
+        <li>Publicar conteúdo que infrinja direitos autorais ou direitos de imagem de terceiros;</li>
+        <li>Usar o sistema para distribuir material ofensivo, discriminatório ou enganoso;</li>
+        <li>Tentar explorar ou comprometer a segurança ou estabilidade do sistema ou de terceiros.</li>
+    </ul>
+
+    <h2>4. Conteúdo Gerado</h2>
+    <p>Todos os vídeos gerados por IA a partir do nosso sistema são de responsabilidade exclusiva do usuário final. Embora empreguemos algoritmos que respeitam padrões éticos, não garantimos que o conteúdo gerado será isento de erros ou interpretações inadequadas.</p>
+
+    <h2>5. Privacidade</h2>
+    <p>Sua privacidade é extremamente importante para nós. Para saber como coletamos, usamos e armazenamos seus dados, consulte nossa <a href="https://starck-42.github.io/AI-POV-VIDEOS-terms/privacy.html" target="_blank">Política de Privacidade</a>.</p>
+
+    <h2>6. Licença Limitada</h2>
+    <p>Concedemos a você uma licença limitada, não exclusiva, intransferível e revogável para utilizar o aplicativo apenas conforme descrito nestes Termos.</p>
+
+    <h2>7. Propriedade Intelectual</h2>
+    <p>Todo o conteúdo original da plataforma, incluindo scripts, automações, logotipos e interfaces, são propriedade exclusiva de seus desenvolvedores e estão protegidos por leis de direitos autorais e propriedade intelectual.</p>
+
+    <h2>8. Limitação de Responsabilidade</h2>
+    <p>O aplicativo é fornecido “como está”, sem garantias de qualquer tipo. Não seremos responsáveis por quaisquer danos diretos, indiretos ou incidentais que surjam do uso ou da incapacidade de utilizar o serviço.</p>
+
+    <h2>9. Modificações nos Termos</h2>
+    <p>Reservamo-nos o direito de alterar estes Termos a qualquer momento. Alterações significativas serão comunicadas aos usuários via aviso na interface do aplicativo ou por e-mail, quando aplicável.</p>
+
+    <h2>10. Contato</h2>
+    <p>Se você tiver dúvidas ou preocupações sobre estes Termos, entre em contato conosco por meio do nosso repositório oficial: <a href="https://github.com/starck-42/AI-POV-VIDEOS-terms" target="_blank">https://github.com/starck-42/AI-POV-VIDEOS-terms</a></p>
 </body>
 </html>
+"""
+
+output_path = Path("/mnt/data/terms.html")
+output_path.write_text(html_content, encoding="utf-8")
+
+output_path.name
